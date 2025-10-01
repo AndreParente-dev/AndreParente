@@ -1,0 +1,275 @@
+/* =================== CSS inspirado no site de referência =================== */
+/* Variáveis */
+:root{
+  --cor-fundo: #0f0f0f;
+  --cor-texto: #fefcfc;
+  --cor-texto-sec: #9a9a9a;
+  --accent: #e56c2f;        /* laranja/alaranjado do site */
+  --card-bg: #111111;
+  --max-width: 1200px;
+  --header-height: 72px;
+  --gap: 16px;
+  --radius: 8px;
+  --transition: 200ms ease;
+}
+
+/* Reset / base */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background:var(--cor-fundo);
+  color:var(--cor-texto);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+  padding-top: var(--header-height); /* espaço para header fixo (mobile-first) */
+}
+
+/* Container central */
+.container{
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:0 16px;
+}
+
+/* Skip link (acessibilidade) */
+.skip-link{
+  position:absolute;
+  left:12px;
+  top:-48px;
+  background:var(--accent);
+  color:#fff;
+  padding:.5rem .9rem;
+  border-radius:6px;
+  z-index:3000;
+  text-decoration:none;
+  font-weight:600;
+}
+.skip-link:focus{ top:12px; outline:3px solid rgba(255,255,255,0.08) }
+
+/* ================= HEADER ================= */
+header{
+  position:fixed;
+  inset:0 0 auto 0; 
+  height: var(--header-height);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:0 20px;
+  background:var(--cor-fundo);
+  border-top:4px solid var(--accent);
+  z-index:2000;
+  gap:12px;
+}
+
+
+header .logo{
+  position:absolute;       
+  left:20px;
+  height:56px;
+  width:auto;
+  display:block;
+}
+
+
+header nav{
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.menu{
+  display:flex;
+  gap:14px;
+  align-items:center;
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+
+.menu a{
+  color:var(--cor-texto);
+  text-decoration:none;
+  font-weight:700;
+  text-transform:uppercase;
+  font-size:0.95rem;
+  letter-spacing:0.02em;
+  padding:8px 10px;
+  border-radius:6px;
+  transition: color var(--transition), background var(--transition), transform var(--transition);
+}
+.menu a:hover,
+.menu a:focus{
+  color:var(--accent);
+  background: rgba(226, 101, 38, 0.885);
+  outline: none;
+  transform: translateY(-1px);
+}
+.menu li{ border-right:1px solid rgba(255,255,255,0.04); padding-right:10px; }
+.menu li:last-child{ border-right:none }
+
+
+.menu a:focus{
+  box-shadow: 0 0 0 3px rgba(226, 101, 38, 0.885);
+  outline: none;
+}
+
+
+.hero{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:48vh;
+  text-align:center;
+  padding:48px 16px;
+  background-image: url("../imagens/hero.jpg");
+  background-size:cover;
+  background-position:center;
+  position:relative;
+  color:var(--cor-texto);
+}
+
+.hero::after{
+  content:"";
+  position:absolute; inset:0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.55));
+  z-index:0;
+}
+
+.hero > * { position:relative; z-index:1; }
+.hero h1{ font-size:2.2rem; margin:0 0 8px; letter-spacing:0.02em; }
+.hero p{ margin:0; color:var(--cor-texto-sec); font-size:1.05rem }
+
+
+section{ padding:36px 0; }
+.destaques .section-title,
+.sobre .section-title { 
+  color:var(--accent);
+  margin-bottom:18px;
+  font-weight:700;
+}
+
+
+.grid-carros{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:20px;
+}
+
+.carro{
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  overflow:hidden;
+  position:relative;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+  transition: transform var(--transition);
+}
+.carro:hover{ transform: translateY(-6px) }
+
+
+.carro img{
+  width:100%;
+  height:250px;
+  object-fit:cover;
+  display:block;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+
+
+.carro .info{
+  padding:12px 14px;
+}
+
+.carro h3{
+  margin:0 0 6px;
+  font-size:1rem;
+  text-transform:uppercase;
+  color:var(--cor-texto);
+}
+.carro p{ margin:0 0 10px; color:var(--cor-texto-sec); font-size:0.94rem }
+
+.carro .meta{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:8px;
+}
+.carro .meta .kms{ font-size:0.85rem; color:var(--cor-texto-sec) }
+
+
+
+.carro .badge{
+  position:absolute;
+  left:12px;
+  top:12px;
+  background:rgba(0,0,0,0.6);
+  border:2px solid var(--accent);
+  color:var(--cor-texto);
+  padding:6px 8px;
+  border-radius:6px;
+  font-weight:700;
+  z-index:3;
+  font-size:0.82rem;
+}
+
+/* Galeria auxiliar */
+.galeria{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px,1fr));
+  gap:12px;
+}
+
+/* ================= FOOTER ================= */
+footer.divisao-rodape{
+  background:#1f1f1f;
+  color:var(--cor-texto);
+  padding:28px 16px;
+  border-top: 4px solid rgba(226, 101, 38, 0.885);
+}
+footer .rodape-conteudo{
+  max-width:var(--max-width);
+  margin:0 auto;
+  display:flex;
+  gap:20px;
+  justify-content:space-between;
+  align-items:flex-start;
+  flex-wrap:wrap;
+}
+footer .rodape-contato, footer .rodape-horario{
+  flex:1 1 280px;
+  color:var(--cor-texto-sec);
+}
+footer a{ color:var(--accent); text-decoration:none }
+footer .rodape-copy{ text-align:center; margin-top:18px; color:var(--cor-texto-sec) }
+
+/* ================= RESPONSIVIDADE (breakpoints) ================= */
+/* Tablet: duas colunas no grid de carros */
+@media (min-width:600px){
+  .grid-carros{ grid-template-columns: repeat(2, 1fr) }
+  .hero h1{ font-size:2.8rem }
+  .hero p{ font-size:1.1rem }
+}
+
+/* Desktop: 3 ou 4 colunas, mais espaçamento */
+@media (min-width:900px){
+  .grid-carros{ grid-template-columns: repeat(3, 1fr) }
+  .container{ padding:0 24px }
+  header .logo{ height:64px }
+}
+
+/* Wide screens: 4 colunas */
+@media (min-width:1200px){
+  .grid-carros{ grid-template-columns: repeat(4, 1fr) }
+}
+
+/* Mobile adjustments: logo menor e menu em duas linhas se necessário */
+@media (max-width:480px){
+  header{ padding:6px 12px; height:64px }
+  header .logo{ left:12px; height:44px }
+  .menu{ gap:8px; flex-wrap:wrap; justify-content:center }
+  .hero{ padding:36px 12px; min-height:40vh }
+  .carro img{ height:160px }
+}
