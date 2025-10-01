@@ -1,4 +1,3 @@
-
 :root{
   --cor-fundo: #0f0f0f;
   --cor-texto: #fefcfc;
@@ -268,4 +267,5 @@ footer .rodape-copy{ text-align:center; margin-top:18px; color:var(--cor-texto-s
   .hero{ padding:36px 12px; min-height:40vh }
   .carro img{ height:160px }
 }
+
 
