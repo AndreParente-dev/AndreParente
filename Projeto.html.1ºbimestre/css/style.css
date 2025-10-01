@@ -1,10 +1,9 @@
-/* =================== CSS inspirado no site de referência =================== */
-/* Variáveis */
+
 :root{
   --cor-fundo: #0f0f0f;
   --cor-texto: #fefcfc;
   --cor-texto-sec: #9a9a9a;
-  --accent: #e56c2f;        /* laranja/alaranjado do site */
+  --accent: #e56c2f;        
   --card-bg: #111111;
   --max-width: 1200px;
   --header-height: 72px;
@@ -13,7 +12,6 @@
   --transition: 200ms ease;
 }
 
-/* Reset / base */
 *{box-sizing:border-box}
 html,body{height:100%}
 body{
@@ -24,17 +22,15 @@ body{
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
   line-height:1.45;
-  padding-top: var(--header-height); /* espaço para header fixo (mobile-first) */
+  padding-top: var(--header-height); 
 }
 
-/* Container central */
 .container{
   max-width:var(--max-width);
   margin:0 auto;
   padding:0 16px;
 }
 
-/* Skip link (acessibilidade) */
 .skip-link{
   position:absolute;
   left:12px;
@@ -49,7 +45,6 @@ body{
 }
 .skip-link:focus{ top:12px; outline:3px solid rgba(255,255,255,0.08) }
 
-/* ================= HEADER ================= */
 header{
   position:fixed;
   inset:0 0 auto 0; 
@@ -273,3 +268,4 @@ footer .rodape-copy{ text-align:center; margin-top:18px; color:var(--cor-texto-s
   .hero{ padding:36px 12px; min-height:40vh }
   .carro img{ height:160px }
 }
+
