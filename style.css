@@ -67,7 +67,6 @@ header .logo{
   display:block;
 }
 
-
 header nav{
   margin:0 auto;
   display:flex;
@@ -111,7 +110,6 @@ header nav{
   outline: none;
 }
 
-
 .hero{
   display:flex;
   align-items:center;
@@ -137,7 +135,6 @@ header nav{
 .hero h1{ font-size:2.2rem; margin:0 0 8px; letter-spacing:0.02em; }
 .hero p{ margin:0; color:var(--cor-texto-sec); font-size:1.05rem }
 
-
 section{ padding:36px 0; }
 .destaques .section-title,
 .sobre .section-title { 
@@ -145,7 +142,6 @@ section{ padding:36px 0; }
   margin-bottom:18px;
   font-weight:700;
 }
-
 
 .grid-carros{
   display:grid;
@@ -163,7 +159,6 @@ section{ padding:36px 0; }
 }
 .carro:hover{ transform: translateY(-6px) }
 
-
 .carro img{
   width:100%;
   height:250px;
@@ -171,7 +166,6 @@ section{ padding:36px 0; }
   display:block;
   border-bottom: 1px solid rgba(255,255,255,0.03);
 }
-
 
 .carro .info{
   padding:12px 14px;
@@ -258,5 +252,3 @@ footer .rodape-copy{ text-align:center; margin-top:18px; color:var(--cor-texto-s
   .hero{ padding:36px 12px; min-height:40vh }
   .carro img{ height:160px }
 }
-
-
