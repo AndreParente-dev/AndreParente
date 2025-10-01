@@ -193,8 +193,6 @@ section{ padding:36px 0; }
 }
 .carro .meta .kms{ font-size:0.85rem; color:var(--cor-texto-sec) }
 
-
-
 .carro .badge{
   position:absolute;
   left:12px;
@@ -209,14 +207,12 @@ section{ padding:36px 0; }
   font-size:0.82rem;
 }
 
-/* Galeria auxiliar */
 .galeria{
   display:grid;
   grid-template-columns: repeat(auto-fit, minmax(140px,1fr));
   gap:12px;
 }
 
-/* ================= FOOTER ================= */
 footer.divisao-rodape{
   background:#1f1f1f;
   color:var(--cor-texto);
@@ -239,27 +235,22 @@ footer .rodape-contato, footer .rodape-horario{
 footer a{ color:var(--accent); text-decoration:none }
 footer .rodape-copy{ text-align:center; margin-top:18px; color:var(--cor-texto-sec) }
 
-/* ================= RESPONSIVIDADE (breakpoints) ================= */
-/* Tablet: duas colunas no grid de carros */
 @media (min-width:600px){
   .grid-carros{ grid-template-columns: repeat(2, 1fr) }
   .hero h1{ font-size:2.8rem }
   .hero p{ font-size:1.1rem }
 }
 
-/* Desktop: 3 ou 4 colunas, mais espaçamento */
 @media (min-width:900px){
   .grid-carros{ grid-template-columns: repeat(3, 1fr) }
   .container{ padding:0 24px }
   header .logo{ height:64px }
 }
 
-/* Wide screens: 4 colunas */
 @media (min-width:1200px){
   .grid-carros{ grid-template-columns: repeat(4, 1fr) }
 }
 
-/* Mobile adjustments: logo menor e menu em duas linhas se necessário */
 @media (max-width:480px){
   header{ padding:6px 12px; height:64px }
   header .logo{ left:12px; height:44px }
@@ -267,4 +258,5 @@ footer .rodape-copy{ text-align:center; margin-top:18px; color:var(--cor-texto-s
   .hero{ padding:36px 12px; min-height:40vh }
   .carro img{ height:160px }
 }
+
 
